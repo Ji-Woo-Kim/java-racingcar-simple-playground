@@ -1,4 +1,4 @@
-package entity;
+package domain;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -9,9 +9,13 @@ public class Racing {
 
     List<Car> cars = new ArrayList<>();
 
-    public void createCar(int carNum) {
+    public List<Car> getCars() {
+        return cars;
+    }
+
+    public void createCars(int carNum) {
         for(int i = 0; i < carNum; i++) {
-            cars.add(new Car());
+            this.cars.add(new Car("car" + i));
         }
     }
 
@@ -23,22 +27,22 @@ public class Racing {
     public void round() {
         for(Car car:cars) {
             Random random = new Random();
-            int num = random.nextInt(9);
+            int num = random.nextInt(10);
             car.moveCar(num);
         }
     }
 
     public List<Car> findWinner() {
         int maxPosition = findMaxPosition();
-        return cars.stream().filter(c -> c.getPosition() == maxPosition).toList();
+        return cars.stream()
+                .filter(c -> c.getPosition() == maxPosition)
+                .toList();
     }
 
     private int findMaxPosition() {
-        List<Integer> positions = new ArrayList<>();
-        for (Car car : cars) {
-            positions.add(car.getPosition());
-        }
-        return Collections.max(positions);
+        return cars.stream()
+                .mapToInt(car -> car.getPosition())
+                .max().orElse(0);
     }
 
 }
