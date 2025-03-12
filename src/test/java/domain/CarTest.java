@@ -11,7 +11,7 @@ public class CarTest {
     @Test
     @DisplayName("0-9 사이의 random 값이 4이상이면 전진한다")
     public void forward_test() {
-        Car car = new Car("Polly");
+        Car car = new Car("car0");
 
         car.moveCar(5);
 
@@ -22,7 +22,7 @@ public class CarTest {
     @Test
     @DisplayName("0-9 사이의 random 값이 4이하면 멈춘다")
     public void stop_test() {
-        Car car = new Car("Polly");
+        Car car = new Car("car0");
 
         car.moveCar(3);
 
