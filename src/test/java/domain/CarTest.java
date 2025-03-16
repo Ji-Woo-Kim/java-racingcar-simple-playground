@@ -17,7 +17,6 @@ public class CarTest {
         assertEquals(1, car.getPosition());
     }
 
-
     @Test
     @DisplayName("0-9 사이의 random 값이 4이하면 멈춘다")
     public void moveCar_stop_test() {
