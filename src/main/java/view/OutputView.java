@@ -14,7 +14,7 @@ public class OutputView {
 
     public static void printRound(Cars cars) {
         for (Car car : cars.getCars()) {
-            System.out.println(String.format("%s : %d", car.getName(), car.getPosition()));
+            System.out.println(car.getName() + ":" + "-".repeat(car.getPosition()));
         }
         System.out.println(); // 추가적인 공백 출력
     }

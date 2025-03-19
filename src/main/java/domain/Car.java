@@ -1,7 +1,5 @@
 package domain;
 
-import java.util.stream.DoubleStream;
-
 public class Car {
 
     private final String name;
