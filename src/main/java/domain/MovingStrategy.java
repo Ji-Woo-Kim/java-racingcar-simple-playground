@@ -1,4 +1,7 @@
 package domain;
 
-public class MovingStrategy {
+@FunctionalInterface
+public interface MovingStrategy {
+
+    boolean isMovable();
 }
