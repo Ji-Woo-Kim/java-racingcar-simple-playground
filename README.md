@@ -31,3 +31,27 @@
   - startRacing(int roundNum) : roundNum 횟수만큼 경주 진행.
   - round() : 각 라운드마다 자동차의 위치가 달라짐.
   - findWinner() : 가장 앞에 있는 우승 자동차 찾아 반환.
+ 
+---
+## 프로젝트 구조
+
+📁 src
+📁 main
+📁 java
+- 📁 application
+  - 📄 RacingCarApplication.java
+- 📁 domain
+  - 📄 Car.java
+  - 📄 Cars.java
+  - 📄 MovingStrategy.java
+  - 📄 Racing.java
+  - 📄 RandomMovingStrategy.java
+- 📁 view
+  - 📄 InputView.java
+  - 📄 OutputView.java
+
+📁 test
+📁 java
+- 📁 domain
+  - 📄 CarTest.java
+
