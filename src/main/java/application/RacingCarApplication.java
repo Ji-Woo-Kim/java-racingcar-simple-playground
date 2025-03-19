@@ -1,20 +1,17 @@
 package application;
 
-import domain.MovingStrategy;
-import domain.Racing;
-import domain.RandomMovingStrategy;
+import domain.*;
 import view.InputView;
 import view.OutputView;
 
 import java.util.List;
-import java.util.Random;
 
 public class RacingCarApplication {
 
     public static void main(String[] args) {
 
-        Random random = new Random();
-        final MovingStrategy movingStrategy = new RandomMovingStrategy(random);
+        NumberGenerator numberGenerator = new RandomNumberGenerator();
+        MovingStrategy movingStrategy = new RandomMovingStrategy(numberGenerator);
 
         // 사용자 입력(n대의 자동차 이름, 라운드 횟수)
         final List<String> carNames = InputView.getCarNames();

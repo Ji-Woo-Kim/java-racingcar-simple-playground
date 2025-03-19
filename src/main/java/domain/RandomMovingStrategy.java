@@ -1,19 +1,17 @@
 package domain;
 
-import java.util.Random;
-
 public class RandomMovingStrategy implements MovingStrategy {
 
     private static final int MOVE_THRESHOLD = 4;
 
-    private final Random random;
+    private final NumberGenerator numberGenerator;
 
-    public RandomMovingStrategy(Random random) {
-        this.random = random;
+    public RandomMovingStrategy(NumberGenerator numberGenerator) {
+        this.numberGenerator = numberGenerator;
     }
 
     @Override
     public boolean isMovable() {
-        return random.nextInt(10) >= MOVE_THRESHOLD;
+        return numberGenerator.generate() >= MOVE_THRESHOLD;
     }
 }
