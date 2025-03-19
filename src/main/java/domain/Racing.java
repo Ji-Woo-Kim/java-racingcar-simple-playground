@@ -10,8 +10,8 @@ public class Racing {
     private final int roundCount;
     private final MovingStrategy movingStrategy;
 
-    public Racing(List<String> Names, MovingStrategy movingStrategy, int roundCount) {
-        this.cars = new Cars(Names);
+    public Racing(List<String> names, MovingStrategy movingStrategy, int roundCount) {
+        this.cars = new Cars(names);
         this.roundCount = roundCount;
         this.movingStrategy = movingStrategy;
     }
