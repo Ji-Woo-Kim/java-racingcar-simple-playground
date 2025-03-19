@@ -2,7 +2,7 @@ package domain;
 
 import java.util.Random;
 
-public class RandomGenerateStrategy implements MovingStrategy {
+public class RandomMovingStrategy implements MovingStrategy {
 
     private static final int MOVE_THRESHOLD = 4;
     private static final Random random = new Random();
