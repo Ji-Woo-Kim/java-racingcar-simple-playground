@@ -1,6 +1,10 @@
 package application;
 
 import domain.*;
+import domain.generator.NumberGenerator;
+import domain.generator.RandomNumberGenerator;
+import domain.strategy.MovingStrategy;
+import domain.strategy.RandomMovingStrategy;
 import view.InputView;
 import view.OutputView;
 
@@ -14,8 +18,8 @@ public class RacingCarApplication {
         MovingStrategy movingStrategy = new RandomMovingStrategy(numberGenerator);
 
         // 사용자 입력(n대의 자동차 이름, 라운드 횟수)
-        final List<String> carNames = InputView.getCarNames();
-        final int roundCount = InputView.getRoundCount();
+        final List<String> carNames = InputView.scanCarNames();
+        final int roundCount = InputView.scanRoundCount();
 
         // 경주 시작 & 라운드 별 결과 출력
         OutputView.printResultMessage(); // "실행 결과" 메시지 출력

@@ -1,5 +1,9 @@
 package domain;
 
+import domain.generator.ControlRandomNumberGenerator;
+import domain.generator.NumberGenerator;
+import domain.strategy.MovingStrategy;
+import domain.strategy.RandomMovingStrategy;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
