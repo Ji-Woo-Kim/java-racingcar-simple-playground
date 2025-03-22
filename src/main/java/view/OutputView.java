@@ -8,12 +8,13 @@ import java.util.stream.Collectors;
 public class OutputView {
 
     public static void printResultMessage() {
+        System.out.println();
         System.out.println("실행 결과");
     }
 
     public static void printRound(final Cars cars) {
         for (final Car car : cars.getCars()) {
-            System.out.println(car.getName() + ":" + "-".repeat(car.getPosition()));
+            System.out.println(car.getName() + " : " + "-".repeat(car.getPosition()));
         }
         System.out.println(); // 추가적인 공백 출력
     }
