@@ -1,4 +1,6 @@
-package domain;
+package domain.strategy;
+
+import domain.generator.NumberGenerator;
 
 public class RandomMovingStrategy implements MovingStrategy {
 

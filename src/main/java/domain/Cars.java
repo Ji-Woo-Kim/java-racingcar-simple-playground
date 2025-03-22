@@ -1,5 +1,7 @@
 package domain;
 
+import domain.strategy.MovingStrategy;
+
 import java.util.List;
 import java.util.stream.Collectors;
 

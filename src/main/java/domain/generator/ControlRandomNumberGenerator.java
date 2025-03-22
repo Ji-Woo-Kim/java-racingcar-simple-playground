@@ -1,4 +1,4 @@
-package domain;
+package domain.generator;
 
 public class ControlRandomNumberGenerator implements NumberGenerator {
 

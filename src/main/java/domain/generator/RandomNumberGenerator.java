@@ -1,8 +1,8 @@
-package domain;
+package domain.generator;
 
 import java.util.Random;
 
-public class RandomNumberGenerator implements NumberGenerator{
+public class RandomNumberGenerator implements NumberGenerator {
 
     private final static int RANDOM_BOUND = 10;
 

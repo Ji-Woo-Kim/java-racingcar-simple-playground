@@ -1,5 +1,6 @@
 package domain;
 
+import domain.strategy.MovingStrategy;
 import view.OutputView;
 
 import java.util.List;
