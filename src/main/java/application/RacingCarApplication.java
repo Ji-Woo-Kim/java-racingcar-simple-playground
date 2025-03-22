@@ -27,6 +27,6 @@ public class RacingCarApplication {
         racing.start();
 
         // 최종 우승자 리스트 출력
-        OutputView.printWinners(racing.getWinners());
+        OutputView.printWinners(Cars.getWinners());
     }
 }

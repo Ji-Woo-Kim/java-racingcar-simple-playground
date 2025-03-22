@@ -28,16 +28,4 @@ public class Racing {
         OutputView.printRound(cars);
     }
 
-    public List<Car> getWinners() {
-        int maxPosition = findMaxPosition();
-        return cars.getCars().stream()
-                .filter(c -> c.getPosition() == maxPosition)
-                .toList();
-    }
-
-    private int findMaxPosition() {
-        return cars.getCars().stream()
-                .mapToInt(Car::getPosition)
-                .max().orElse(0);
-    }
 }
